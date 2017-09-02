@@ -33,6 +33,7 @@ def main():
     # A TurtleWindow works "behind the scenes" to enable Turtle movement
     window = rg.TurtleWindow()
 
+    turtle5()
     turtle1()
     turtle4()
     turtle3()
@@ -107,7 +108,7 @@ def turtle3():
 
 def turtle4():
     """
-    Defining another turtle
+    Defining another turtle that draws a square
     """
     pete = rg.SimpleTurtle()
     pete.pen = rg.Pen('cyan',5)
@@ -116,6 +117,23 @@ def turtle4():
     pete.draw_square(30)
     pete.end_fill()
 
+
+def turtle5():
+    """
+    Defining another turtle that draws a polygon
+    """
+    keem = rg.SimpleTurtle()
+    keem.pen = rg.Pen('gold',10)
+    keem.paint_bucket = rg.PaintBucket('blue')
+
+    keem.pen_up()
+    keem.right(90)
+    keem.forward(50)
+    keem.pen_down()
+
+    keem.begin_fill()
+    keem.draw_regular_polygon(5,20)
+    keem.end_fill()
 
 
 ########################################################################
@@ -198,7 +216,7 @@ def turtle4():
 
 ########################################################################
 #
-# TODO: 5.
+# Done: 5.
 #   The previous two TODOs IMPLEMENTED a function (TO DO 3)
 #   and TESTED that function (TO DO 4).
 #
