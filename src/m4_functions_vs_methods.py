@@ -245,7 +245,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # Done: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -260,16 +260,16 @@ def try_methods_and_functions():
 
     curtis.backward(150)
 
-    curtis.speed(1)
+    curtis.speed = 1
     draw_many_squares(curtis,2,100,30)
 
-    curtis.speed(5)
+    curtis.speed = 5
     curtis.pen = rg.Pen('red',5)
     draw_many_squares(curtis,10,50,15)
 
-    curtis.speed(100)
+    curtis.speed = 100
     curtis.pen = rg.Pen('red',35)
-    draw_many_squares(8,300,60)
+    draw_many_squares(curtis,8,300,60)
 
     curtis.pen = rg.Pen('black',3)
     curtis.backward(200)
