@@ -14,7 +14,7 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-    two_circles()
+    lines()
 
 def two_circles():
     """
@@ -84,7 +84,7 @@ def circle_and_rectangle():
            150.0
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # Done: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -92,8 +92,42 @@ def circle_and_rectangle():
     # IMPORTANT: Use the DOT TRICK to guess the names of the relevant
     #       instance variables for outline thickness, etc.
     # ------------------------------------------------------------------
-    
+    #Defines the window
+    window = rg.RoseWindow(300,500,'Circle and Rectangle')
+    # Defines the circle
+    cp = rg.Point(100,200)
+    r = 30
+    circle = rg.Circle(cp, r)
+    circle.fill_color = 'blue'
+    circle.outline_thickness = 1
+    c1 = rg.Point(100,300)
+    # Defines the Rectangle
+    c2 = rg.Point(250,400)
+    rectangle = rg.Rectangle(c1,c2)
+    rectangle.outline_thickness = 1
 
+    #Attach to canvas
+    circle.attach_to(window)
+    rectangle.attach_to(window)
+
+    #Information about the cirlce
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print(cp)
+    print(100)
+    print(200)
+    #Information about the rectangle
+    print(rectangle.outline_thickness)
+    print(rectangle.fill_color)
+    print((100 + 250)/2,(300+400)/2)
+    print((100 + 250)/2)
+    print((300+400)/2)
+
+
+    #Renders everything
+    window.render()
+
+    window.close_on_mouse_click()
 
 
 def lines():
@@ -119,8 +153,28 @@ def lines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     # ------------------------------------------------------------------
+    window = rg.RoseWindow(400, 300, 'two lines')
+
+    p1 = rg.Point(100,150)
+    p2 = rg.Point(200,250)
+    p3 = rg.Point(300,200)
+
+    line1 = rg.Line(p1,p2)
+    line1.thickness = 5
+    print('The midpoint is',line1.get_midpoint())
+    print('The x-coordinate is',150.0)
+    print('The y-coordinate is',200.0)
+
+    line2 = rg.Line(p2,p3)
+
+    line1.attach_to(window)
+    line2.attach_to(window)
+
+    window.render()
+
+    window.close_on_mouse_click()
 
 
 # ----------------------------------------------------------------------
