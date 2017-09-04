@@ -10,20 +10,20 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 ########################################################################
 #
-# TODO: 2.
+# Done: 2.
 #   RUN this program.  Then answer the following,
 #     GETTING HELP AS NEED! (Ask questions!!!)
 #
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#              Bottom Left hand corner
+#              Top Left Hand Corner
 #
 #        -- In what direction on the screen does the positive X-axis point?
 #              Left to Right
 #
 #        -- In what direction on the screen does the positive Y-axis point?
-#              Bottom to Top
+#              Top to Bottom
 #
 #     b. Write a line of code that constructs a basic RoseWindow object:
 #            window = rg.RoseWindow(500,300,'hello')
@@ -31,7 +31,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #     c. What is the default height of a RoseWindow?
 #        (Type the code shown in your answer above within main to see if PyCharm will help you figure out the answer.
 #         Hint: After you type the ( in the line of code, if you wait a moment PyCharm will add the ) and has a popup.)
-#            300
+#            The default height is 300
 #
 #     d. Write a line of code that construct a RoseWindow object whose height is 100 with any width you choose.
 #         (again try to use PyCharm's hints to help you figure it out)
@@ -44,16 +44,16 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #          -- Write the names of three METHODs that Circle objects have:
 #               (Hint: Use the circle from the example3 function below with the dot trick to let PyCharm help you. )
-#                attach_to, fill_color, clone
+#                attach_to, fill_color, outline_thickness
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle objects have:
-#                x,y, window or canvas
+#                center, what value for outline thickness, what fill color
 #
 #     f. What does a RoseWindow RENDER method do?
-#            It renders the object you want onto the window
+#            It renders the objects you want onto the window
 #
 #     g. When is a RoseWindow close_on_mouse_click method call necessary?  Why?
-#            This is neccesary because otherwise you won't be able to close the window properly. The big X may freeze the program.
+#       After you render the window if you want to close it.
 #
 #   ASK QUESTIONS ** NOW ** if you do not understand how the
 #     RoseGraphics graphics system works.
@@ -83,6 +83,8 @@ def example1():
     """ Displays an empty window. """
     window = rg.RoseWindow(500, 300, 'Example 1: An empty window')
     window.close_on_mouse_click()
+    circ = rg.Circle()
+    circ.
 
 
 def example2():
@@ -134,7 +136,6 @@ def example3():
     circle = rg.Circle(center_point, radius)
     circle.fill_color = 'green'
     circle.attach_to(window)
-
 
     # ------------------------------------------------------------------
     # Rectangle: needs two opposite corners.

@@ -14,7 +14,10 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
+    two_circles()
+    circle_and_rectangle()
     lines()
+
 
 def two_circles():
     """
@@ -114,14 +117,14 @@ def circle_and_rectangle():
     print(circle.outline_thickness)
     print(circle.fill_color)
     print(cp)
-    print(100)
-    print(200)
+    print(cp.x)
+    print(cp.y)
     #Information about the rectangle
     print(rectangle.outline_thickness)
     print(rectangle.fill_color)
-    print((100 + 250)/2,(300+400)/2)
-    print((100 + 250)/2)
-    print((300+400)/2)
+    print(rectangle.get_center())
+    print(rectangle.get_center().x)
+    print(rectangle.get_center().y)
 
 
     #Renders everything
